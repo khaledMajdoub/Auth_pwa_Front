@@ -1,0 +1,72 @@
+<script lang="ts">
+	import NotificationButton from '$lib/components/notifications/NotificationButton.svelte';
+	import logowhite from '$lib/assets/logowhite.png';
+	import '../app.css';
+	import { AppBar } from '@skeletonlabs/skeleton';
+	import { Avatar } from '@skeletonlabs/skeleton';
+	import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
+	import { storePopup } from '@skeletonlabs/skeleton';
+	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
+	import { page } from '$app/stores';
+	import Usermenu from '$lib/components/user/Usermenu.svelte';
+	let display = false;
+
+	const handleClick = () => {
+		display = !display;
+	};
+</script>
+
+{#if $page.url.pathname !== '/'}
+	<AppBar background="bg-blue-950" shadow="shadow-2xl">
+		<div class="flex items-center justify-between sm:ml-6 sm:block">
+			<div class="flex items-center">
+				<a href="/">
+					<img src={logowhite} class="w-10" alt="huxium logo" />
+				</a>
+				<div class="ml-4 space-x-5 flex">
+					<a
+						href="/"
+						class="text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-900 hover:text-white"
+						>Option 1</a
+					>
+					<a
+						href="/"
+						class="text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-900 hover:text-white"
+						>Option 2</a
+					>
+					<a
+						href="/"
+						class="text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-900 hover:text-white"
+						>Option 3</a
+					>
+					<a
+						href="/"
+						class="text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-900 hover:text-white"
+						>Option 4</a
+					>
+				</div>
+			</div>
+			<button
+				on:click={handleClick}
+				type="button"
+				class=" z-50 relative flex rounded-full hover:bg-gray-700 bg-gray-800 text-sm focus:outline-none focus:ring-5 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+			>
+				<Avatar
+					class="fixed right-3 top-3 z-50 hover:border-black"
+					width="w-12"
+					border="border-4 border-surface-300-600-token"
+					cursor="cursor-pointer"
+				/>
+			</button>
+			{#if display}
+				<Usermenu />
+			{/if}
+
+			<NotificationButton />
+		</div>
+	</AppBar>
+{/if}
+<slot />
+{#if $page.url.pathname !== '/'}
+	<footer class="fixed bottom-0 w-screen bg-blue-950 text-white">the footer</footer>
+{/if}

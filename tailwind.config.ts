@@ -15,7 +15,16 @@ const config = {
 		)
 	],
 	theme: {
-		extend: {},
+		extend: {
+
+			height: {
+				sidebar:'40rem',
+				md: '38rem',
+				lg: '42rem',
+				xl: '48rem',
+			}
+			
+		},
 	},
 	plugins: [
 		forms,

@@ -2,8 +2,8 @@
 	<div class="flex-auto" data-sveltekit-preload-data data-sveltekit-keepfocus>
 		<div class="grid grid-cols-2 gap-4 overflow-x-auto px-4 py-10">
 			<a
-				class="card bg-initial card-hover overflow-hidden w-72 h-72 snap-start shrink-0 md:w-80 text-center hover:shadow-red-500 hover:shadow-md"
-				href="/elements/cards"
+				class="card bg-initial card-hover overflow-hidden shadow-xl w-72 h-72 snap-start shrink-0 md:w-80 text-center hover:shadow-red-500 hover:shadow-md"
+				href="/home/dashboard"
 			>
 				<header>
 					<div class="bg-red-600 w-full aspect-[21/9]" />
@@ -17,7 +17,7 @@
 			</a>
 
 			<a
-				class="card bg-initial card-hover overflow-hidden w-72 h-72 snap-start shrink-0 md:w-80 text-center hover:shadow-yellow-500 hover:shadow-md"
+				class="card bg-initial card-hover overflow-hidden shadow-xl w-72 h-72 snap-start shrink-0 md:w-80 text-center hover:shadow-yellow-500 hover:shadow-md"
 				href="/elements/cards"
 			>
 				<header>
@@ -32,7 +32,7 @@
 			</a>
 
 			<a
-				class="card bg-initial card-hover overflow-hidden w-72 h-72 snap-start shrink-0 md:w-80 text-center hover:shadow-blue-500 hover:shadow-md"
+				class="card bg-initial card-hover overflow-hidden shadow-xl w-72 h-72 snap-start shrink-0 md:w-80 text-center hover:shadow-blue-500 hover:shadow-md"
 				href="/elements/cards"
 			>
 				<header>
@@ -47,7 +47,7 @@
 			</a>
 
 			<a
-				class="card bg-initial card-hover overflow-hidden w-72 h-72 snap-start shrink-0 md:w-80 text-center hover:shadow-green-500 hover:shadow-md"
+				class="card bg-initial card-hover overflow-hidden shadow-xl w-72 h-72 snap-start shrink-0 md:w-80 text-center hover:shadow-green-500 hover:shadow-md"
 				href="/elements/cards"
 			>
 				<header>

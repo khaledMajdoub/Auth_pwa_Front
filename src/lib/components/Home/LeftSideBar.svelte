@@ -1,19 +1,21 @@
-<body class="to-blue-400 bg-gradient-to-bl">
+<body class="to-blue-400 bg-gradient-to-bl sticky">
 	<div
 		class="sidebar fixed top-16 mt-1 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-gray-900"
 	>
-		<div
+		<a
+			href="/home/dashboard"
 			class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
 		>
 			<i class="bi bi-house-door-fill" />
 			<span class="text-[15px] ml-4 text-gray-200 font-bold">Dashboard</span>
-		</div>
-		<div
+		</a>
+		<a
+			href="/home/providers"
 			class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
 		>
 			<i class="bi bi-bookmark-fill" />
 			<span class="text-[15px] ml-4 text-gray-200 font-bold">Providers</span>
-		</div>
+		</a>
 		<div
 			class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
 		>

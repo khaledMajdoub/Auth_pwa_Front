@@ -3,7 +3,8 @@
 	import Loginwith from './Loginwith.svelte';
 	import PasswordForgotten from '$lib/components/passwordforgotten/PasswordForgotten.svelte';
 	import { currentPage } from './store';
-
+	import { LightSwitch } from '@skeletonlabs/skeleton';
+	import session from '$lib/stores/sessions';
 	$: displayLoginForm = true;
 	$: isExpanded = false;
 	let username = '';
@@ -30,6 +31,7 @@
 
 		if (response.ok) {
 			alert('login successful');
+			localStorage.setItem('session', JSON.stringify({ userId: 123, username: 'example' }));
 		} else {
 			alert('login failed');
 		}
@@ -39,7 +41,9 @@
 <header>
 	<title>Login</title>
 </header>
-
+<div class="fixed bottom-1 right-2">
+	<LightSwitch bgDark="bg-surface-900" />
+</div>
 <div class="flex items-center justify-center h-screen from-white to-blue-400 bg-gradient-to-bl">
 	{#if displayLoginForm}
 		<div
@@ -56,19 +60,23 @@
 					class="input rounded-md focus:border-blue-800 bg-gray-200 hover:border-blue-500 mt-4 border-x border-y"
 					title="username"
 					name="username"
+					id="username"
 					type="text"
 					bind:value={username}
 					placeholder="username"
 					autocomplete="username"
+					required
 				/>
 				<input
 					class="input rounded-md focus:border-blue-800 bg-gray-200 hover:border-blue-500 mt-4 border-x border-y"
 					title="password"
 					name="password"
+					id="password"
 					type="password"
 					bind:value={password}
 					placeholder="password"
 					autocomplete="off"
+					required
 				/>
 
 				<label class="flex items-center space-x-2 mt-4">

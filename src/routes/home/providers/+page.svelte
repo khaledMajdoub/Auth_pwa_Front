@@ -10,5 +10,5 @@
 </script>
 
 <div class="mt-60 ml-32">
-	<ConicGradient stops={conicStops} spin>Dashboard Loading</ConicGradient>
+	<ConicGradient stops={conicStops} spin>Providers Loading</ConicGradient>
 </div>

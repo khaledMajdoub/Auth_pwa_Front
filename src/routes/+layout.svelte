@@ -27,7 +27,7 @@
 >
 {#if $page.url.pathname !== '/'}
 	<div class="fixed top-0 w-screen z-50">
-		<AppBar background="bg-gray-900" shadow="shadow-2xl">
+		<AppBar background="bg-gray-900" shadow="shadow-2xl" data-sveltekit-reload>
 			<div class="flex items-center justify-between sm:ml-6 sm:block">
 				<div class="flex items-center">
 					<a href="/">

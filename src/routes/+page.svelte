@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Login from '$lib/components/login/Login.svelte';
+
 	export let form;
 </script>
 

@@ -3,8 +3,8 @@
 	export let data;
 </script>
 
+<div class=" bg-black" />
 <svelte:head>
 	<title>{data.visited ? 'Wecome' : ' back'}</title>
 </svelte:head>
-
 <Cards />

@@ -4,7 +4,6 @@
 	import PasswordForgotten from '$lib/components/passwordforgotten/PasswordForgotten.svelte';
 	import { currentPage } from './store';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
-	import session from '$lib/stores/sessions';
 	$: displayLoginForm = true;
 	$: isExpanded = false;
 	let username = '';

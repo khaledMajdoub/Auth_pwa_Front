@@ -1,12 +1,12 @@
 import * as bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
+import { config } from 'dotenv';
+import { SECRET_KEY } from '$env/static/private';
 
 const saltRounds = 10;
+config();
 
-dotenv.config();
-
-const secretKey = process.env.SECRET_KEY;
+const secretKey = SECRET_KEY
 
 export const actions = {
   default: async ({ request }) => {
@@ -23,8 +23,7 @@ export const actions = {
 
         const token = jwt.sign({ username, password, hash }, secretKey);
 
-        // You can then send the token and username to your backend API
-        // (You need to implement your own API logic for this part)
+
 
         return { success: true, token, username };
       });

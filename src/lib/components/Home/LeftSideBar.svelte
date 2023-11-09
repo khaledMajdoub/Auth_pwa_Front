@@ -1,4 +1,4 @@
-<body class="to-blue-400 bg-gradient-to-bl sticky">
+<body class="to-blue-400 bg-gradient-to-bl fixed">
 	<div
 		class="sidebar fixed top-16 mt-1 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-gray-900"
 	>

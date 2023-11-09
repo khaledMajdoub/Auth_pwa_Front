@@ -4,6 +4,7 @@
 	import PasswordForgotten from '$lib/components/passwordforgotten/PasswordForgotten.svelte';
 	import { currentPage } from './store';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
+	import { enhance } from '$app/forms';
 	$: displayLoginForm = true;
 	$: isExpanded = false;
 	let username = '';
@@ -20,7 +21,8 @@
 		isExpanded = !isExpanded;
 	}
 	async function handleLogin() {
-		const response = await fetch('http://localhost:8080/users/authenticate', {
+		const backurl = process.env.BACKEND_URL;
+		const response = await fetch(backurl + '/api/auth/login', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -54,6 +56,7 @@
 				on:submit={handleLogin}
 				data-sveltekit-preload-data
 				data-sveltekit-keepfocus
+				use:enhance
 			>
 				<input
 					class="input rounded-md focus:border-blue-800 bg-gray-200 hover:border-blue-500 mt-4 border-x border-y"

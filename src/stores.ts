@@ -1,11 +1,8 @@
-import { writable} from "svelte/store";
-
-
+import { writable } from "svelte/store";
 export const currentPage = writable('login');
-export const forgotPassword = writable(true);
-export const inputstore = writable('');
+export const inputStore = writable('');
 
 
-export const setinput = (value:string) => {
-  inputstore.set(value);
+export const setInput = (value: string) => {
+  inputStore.set(value);
 };

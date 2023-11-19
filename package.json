@@ -16,7 +16,7 @@
 		"@skeletonlabs/skeleton": "^2.3.0",
 		"@skeletonlabs/tw-plugin": "^0.2.2",
 		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.20.4",
+		"@sveltejs/kit": "^1.27.5",
 		"@tailwindcss/forms": "^0.5.6",
 		"@types/bcrypt": "^5.0.2",
 		"@types/bcryptjs": "^2.4.6",
@@ -40,10 +40,10 @@
 	"dependencies": {
 		"@floating-ui/dom": "^1.5.3",
 		"bcrypt": "^5.1.1",
-		"bcryptjs": "^2.4.3",
+		"crypto-js": "^4.2.0",
 		"dotenv": "^16.3.1",
 		"jsonwebtoken": "^9.0.2",
-		"pg": "^8.11.3",
+		"remix": "^2.2.0",
 		"uuid": "^9.0.1"
 	}
 }

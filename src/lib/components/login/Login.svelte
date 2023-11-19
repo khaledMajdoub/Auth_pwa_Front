@@ -1,9 +1,9 @@
 <script lang="ts">
 	import logo from '$lib/assets/logo.png';
 	import Loginwith from './Loginwith.svelte';
-	import { LightSwitch } from '@skeletonlabs/skeleton';
+
 	import { enhance } from '$app/forms';
-	$: displayLoginForm = true;
+
 	$: isExpanded = false;
 	let username = '';
 	let password = '';
@@ -33,9 +33,7 @@
 <header>
 	<title>Login</title>
 </header>
-<div class="fixed bottom-1 right-2">
-	<LightSwitch bgDark="bg-surface-900" />
-</div>
+
 <div class="flex items-center justify-center h-screen from-white to-blue-400 bg-gradient-to-bl">
 	<div
 		class="backdrop-blur-sm bg-white/30 shadow-lg border-slate-600 rounded-lg p-8 max-w-md mx-4 w-full"
